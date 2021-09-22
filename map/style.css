@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+}
+
+.map {
+  height: 100vh;
+  flex: 1;
+}
+
+.map-tooltip {
+  color: #fff;
+  position: absolute;
+  padding: 0.5em;
+  font-size: 0.7em;
+  background: #000;
+  display: none;
+  z-index: 100;
+}
+.map-tooltip h3 {
+  margin: 0;
+  font-size: 1em;
+  color: #B4C3FF;
+}
+.tooltip--schools {
+  margin-top: 0.5em;
+}
+.tooltip--schools > .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 450px;
+}
+.tooltip--schools > .items > div {
+  width: 140px;
+}
+
+#map-search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  font-size: 0.9em;
+}
+#map-search input {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 0.25em 0.5em;
+}
+#map-search input:hover,
+#map-search input:focus {
+  background: rgba(0,0,0,1.0);
+}
+#map-search button {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  margin-left: 1px;
+}
+#map-search button:hover {
+  background: rgba(0,0,0,1.0);
+}
+
+#map-export {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  font-size: 0.7em;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  display: none;
+}
+#map-export:hover {
+  background: rgba(0,0,0,1.0);
+}
+
+h4 {
+  margin: 0.5em 0 0 0;
+  border-bottom: 1px solid #fff;
+}
+
+.map-stage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.map-details {
+  width: 320px;
+  background: #202020;
+  color: #fff;
+  padding: 0.5em;
+  position: relative;
+}
+.map-info {
+  font-size: 0.7em;
+  text-align: center;
+}
+.map-focused-info {
+  font-size: 0.8em;
+}
+.map-focused-info h3 {
+  margin: 0;
+  font-size: 1em;
+  color: #B4C3FF;
+  border-bottom: 1px solid #B4C3FF;
+  margin-top: 1em;
+}
+.map-help {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.7em;
+}
+.map-notes {
+  padding: 0.5em;
+}
+.map-tip {
+  background: #282828;
+  border-top: 1px solid #333;
+  display: none;
+  margin-top: 0.25em;
+  padding: 0.5em;
+}
+
+.button-tip {
+  border-radius: 0.2em;
+  border: 1px solid #fff;
+  display: inline-block;
+  padding: 0 0.1em;
+}
+
+.good {
+  color: #3FB967;
+}
+.bad {
+  color: #EF3838;
+}
+.flag {
+  font-weight: bold;
+}
+.flag.good {
+  color: #fff;
+  background: #3FB967;
+  border-radius: 0.2em;
+  padding: 0.1em 0.2em;
+  display: inline-block;
+  margin: 0.1em 0;
+}

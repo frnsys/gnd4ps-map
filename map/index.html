@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Map</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css" rel="stylesheet" />
+</head>
+<body>
+    <main>
+        <button id="map-export">Export data in view</button>
+        <div class="map-tooltip" id="map-tooltip"></div>
+        <!--
+        <div id="map-search">
+            <input name="query" type="text" placeholder="Search schools" autocomplete="off" /><button>Search</button>
+        </div>
+        -->
+        <div class="map-stage">
+            <div class="map" id="map"></div>
+            <div class="map-details" id="map-details">
+                <div class="map-info">Map is showing census tracts, shaded by their SVI rank.</div>
+                <div class="map-focused-info"></div>
+                <div class="map-help">
+                    <div class="map-notes">
+                        *Percent difference from national median
+                    </div>
+                    <div class="map-tip"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js" integrity="sha512-xQBQYt9UcgblF6aCMrwU1NkVA7HCXaSN2oq0so80KO+y68M+n64FOcqgav4igHe6D5ObBLIf68DWv+gfBowczg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="dist/main.js"></script>
+</body>
+</html>
